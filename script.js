@@ -1,1 +1,1 @@
-canvas(200, 200)
+document.write("idiot")
