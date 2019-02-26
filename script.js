@@ -1,1 +1,1 @@
-document.write("idiot")
+console.log("idiot")
