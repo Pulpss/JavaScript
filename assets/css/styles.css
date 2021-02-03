@@ -1,39 +1,23 @@
-.fa.fa-bars {
-  position: absolute;
-  top: 5px;
-  right: 10px;
-}
-
-h1 {
+#h1 {
   font-family: Anton, sans-serif;
   letter-spacing: 10px;
   margin-top: 5px;
   margin-left: 10px;
+  color: black;
+  text-shadow: -3px 0px 6px rgba(0, 0, 0, 0.70);
 }
 
-#right-panel {
-  position: absolute;
-  width: 10%;
-  height: 100%;
-  top: 0px;
-  right: 0px;
-  background-color: #00bce2;
-  opacity: 50%;
-}
-
-#left-panel {
-  position: absolute;
-  width: 90%;
-  height: 100%;
-  top: 0px;
-  left: 0px;
-  background-color: #00bce2;
-  opacity: 50%;
+#h1.open{
+  color: white;
+  animation-delay: 0.6s;
+  animation: blacktowhitetext 0.8s;
+  
 }
 
 header {
   position: relative;
   top: 0px;
+  cursor: pointer;
 }
 
 #bars {
@@ -45,21 +29,138 @@ header {
   cursor: pointer;
 }
 
-#bar1, #bar2, #bar3 {
+
+
+#bar1{
   position: absolute;
   top: 5px;
   right: 10px;
   width: 40px;
   padding: 3px;
   border-radius: 2px;
+  transform-origin: top left;
+  transform: rotate(0deg);
   background-color: black;
 }
 
 #bar2 {
+  position: absolute;
   top: 16px;
+  right: 10px;
+  width: 40px;
+  padding: 3px;
+  opacity: 100%;
+  border-radius: 2px;
+  background-color: black;
 }
 
 #bar3 {
+  position: absolute;
   top: 27px;
+  right: 10px;
+  width: 40px;
+  padding: 3px;
+  border-radius: 2px;
+  transform-origin: bottom left;
+  transform: rotate(0deg);
+  background-color: black;
 }
+
+#bars.open #bar1{
+  animation-delay: 0.6s;
+  animation: blacktowhitebars1 0.8s;
+  background-color: rgb(255, 255, 255);
+  transform: rotate(35.5deg);
+}
+#bars.open #bar2{
+  animation-delay: 0.6s;
+  animation: blacktowhitebars2 0.8s;
+  background-color: rgb(255, 255, 255);
+  opacity: 0%;
+}
+#bars.open #bar3{
+  animation-delay: 0.6s;
+  animation: blacktowhitebars3 0.8s;
+  background-color: rgb(255, 255, 255);
+  transform: rotate(-35.5deg)}
+}
+
+#right-panel {
+  position: absolute;
+  width: 80px;
+  height: 100%;
+  top: 0px;
+  right: 0px;
+  background-color: #007585;
+  box-shadow: -7px 0px 28px 0px rgba(0,0,0,0.75);
+  visibility: hidden;
+}
+#right-panel.open{
+  visibility: visible;
+	animation: scale-up-ver-top 0.25s both;
+}
+
+#left-panel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  right: 0px;
+  background-color: #00b1c9;
+  visibility: hidden;
+}
+#left-panel.open{
+  visibility: visible;
+  animation: scale-up-hor-right 0.4s both;
+  animation-delay: 0.25s
+  
+}
+
+/*-------------------------------------------*/
+@keyframes scale-up-ver-top {
+  0% {
+    transform: scaleY(0.0);
+    transform-origin: 100% 0%;
+  }
+  100% {
+    transform: scaleY(1);
+    transform-origin: 100% 0%;
+  }
+}
+
+@keyframes scale-up-hor-right {
+  0% {
+    transform: scaleX(0);
+    transform-origin: 100% 100%;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: 100% 100%;
+  }
+}
+
+@keyframes blacktowhitetext {
+  from {color: black;}
+  to {color: white;}
+}
+@keyframes blacktowhitebars1 {
+  from {background-color: black;
+      transform: rotate(0deg)}
+  to {background-color: rgb(255, 255, 255);
+    transform: rotate(35.5deg)}
+}
+@keyframes blacktowhitebars2 {
+  from {background-color: black;
+        opacity: 100%;}
+  to {background-color: rgb(255, 255, 255);
+      opacity: 0%;}
+}
+@keyframes blacktowhitebars3 {
+  from {background-color: black;
+        transform: rotate(0deg)}
+  to {background-color: rgb(255, 255, 255);
+      transform: rotate(-35.5deg)}
+}
+
+
 
