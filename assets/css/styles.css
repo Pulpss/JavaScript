@@ -1,0 +1,65 @@
+.fa.fa-bars {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+h1 {
+  font-family: Anton, sans-serif;
+  letter-spacing: 10px;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+#right-panel {
+  position: absolute;
+  width: 10%;
+  height: 100%;
+  top: 0px;
+  right: 0px;
+  background-color: #00bce2;
+  opacity: 50%;
+}
+
+#left-panel {
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: #00bce2;
+  opacity: 50%;
+}
+
+header {
+  position: relative;
+  top: 0px;
+}
+
+#bars {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 60px;
+  height: 40px;
+  cursor: pointer;
+}
+
+#bar1, #bar2, #bar3 {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  width: 40px;
+  padding: 3px;
+  border-radius: 2px;
+  background-color: black;
+}
+
+#bar2 {
+  top: 16px;
+}
+
+#bar3 {
+  top: 27px;
+}
+
