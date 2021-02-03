@@ -1,14 +1,28 @@
+
+:root {
+  --main-color: #312244;
+  --main-color-darker: #272640;
+  --main-color-lighter: #5C1E5C;
+  --secondary-color: #0b525b;
+  --third-color: #1B3A4B;
+  --very-light-blue: #00d4ff;
+}
+body {
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, var(--main-color-darker) 0%, var(--secondary-color) 50%, var(--very-light-blue) 100%);
+}
+
 #h1 {
-  font-family: Anton, sans-serif;
+  font-family: Quicksand;
   letter-spacing: 10px;
   margin-top: 5px;
   margin-left: 10px;
-  color: black;
-  text-shadow: -3px 0px 6px rgba(0, 0, 0, 0.70);
+  color: var(--very-light-blue);
+  text-shadow: -3px 0px 6px var(--very-light-blue);
 }
 
 #h1.open{
-  color: white;
+  color: var(--main-color-darker);
   animation-delay: 0.6s;
   animation: blacktowhitetext 0.8s;
   
@@ -40,7 +54,7 @@ header {
   border-radius: 2px;
   transform-origin: top left;
   transform: rotate(0deg);
-  background-color: black;
+  background-color: var(--main-color-darker);
 }
 
 #bar2 {
@@ -51,7 +65,7 @@ header {
   padding: 3px;
   opacity: 100%;
   border-radius: 2px;
-  background-color: black;
+  background-color: var(--main-color-darker);
 }
 
 #bar3 {
@@ -63,36 +77,37 @@ header {
   border-radius: 2px;
   transform-origin: bottom left;
   transform: rotate(0deg);
-  background-color: black;
+  background-color: var(--main-color-darker);
 }
 
 #bars.open #bar1{
   animation-delay: 0.6s;
   animation: blacktowhitebars1 0.8s;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--very-light-blue);
   transform: rotate(35.5deg);
 }
+
 #bars.open #bar2{
   animation-delay: 0.6s;
-  animation: blacktowhitebars2 0.8s;
-  background-color: rgb(255, 255, 255);
+  animation: blacktowhitebars2 0.5s;
+  background-color: var(--very-light-blue);
   opacity: 0%;
 }
 #bars.open #bar3{
   animation-delay: 0.6s;
   animation: blacktowhitebars3 0.8s;
-  background-color: rgb(255, 255, 255);
-  transform: rotate(-35.5deg)}
+  background-color: var(--very-light-blue);
+  transform: rotate(-35.5deg);
 }
 
 #right-panel {
   position: absolute;
-  width: 80px;
+  width: 90px;
   height: 100%;
   top: 0px;
   right: 0px;
-  background-color: #007585;
-  box-shadow: -7px 0px 28px 0px rgba(0,0,0,0.75);
+  background-color: var(--main-color-darker);
+  box-shadow: 0px 0px 30px 0px var(--main-color-darker);
   visibility: hidden;
 }
 #right-panel.open{
@@ -105,8 +120,9 @@ header {
   width: 100%;
   height: 100%;
   top: 0px;
-  right: 0px;
-  background-color: #00b1c9;
+  right: 90px;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, var(--very-light-blue) 0vw, var(--secondary-color) 50vw, var(--main-color-darker) 100vw);
   visibility: hidden;
 }
 #left-panel.open{
@@ -140,26 +156,26 @@ header {
 }
 
 @keyframes blacktowhitetext {
-  from {color: black;}
-  to {color: white;}
+  from {color: var(--very-light-blue);}
+  to {color: var(--main-color-darker);}
 }
 @keyframes blacktowhitebars1 {
-  from {background-color: black;
-      transform: rotate(0deg)}
-  to {background-color: rgb(255, 255, 255);
-    transform: rotate(35.5deg)}
+  from {background-color: var(--main-color-darker);
+      transform: rotate(0deg);}
+  to {background-color: var(--very-light-blue);
+    transform: rotate(35.5deg);}
 }
 @keyframes blacktowhitebars2 {
-  from {background-color: black;
+  from {background-color: var(--main-color-darker);
         opacity: 100%;}
-  to {background-color: rgb(255, 255, 255);
+  to {background-color: var(--very-light-blue);
       opacity: 0%;}
 }
 @keyframes blacktowhitebars3 {
-  from {background-color: black;
-        transform: rotate(0deg)}
-  to {background-color: rgb(255, 255, 255);
-      transform: rotate(-35.5deg)}
+  from {background-color: var(--main-color-darker);
+        transform: rotate(0deg);}
+  to {background-color: var(--very-light-blue);
+      transform: rotate(-35.5deg);}
 }
 
 
