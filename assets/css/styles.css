@@ -9,7 +9,7 @@
 }
 body {
   background: rgb(2,0,36);
-  background: linear-gradient(90deg, var(--main-color-darker) 0%, var(--secondary-color) 50%, var(--very-light-blue) 100%);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,117,141,1) 100%);
 }
 
 #h1 {
@@ -121,8 +121,7 @@ header {
   height: 100%;
   top: 0px;
   right: 90px;
-  background: rgb(2,0,36);
-  background: linear-gradient(90deg, var(--very-light-blue) 0vw, var(--secondary-color) 50vw, var(--main-color-darker) 100vw);
+  background-color: var(--very-light-blue);
   visibility: hidden;
 }
 #left-panel.open{
